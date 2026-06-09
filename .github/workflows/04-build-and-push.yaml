@@ -30,7 +30,7 @@ jobs:
           context: ./build-and-push
           file: ./build-and-push/Dockerfile
           # If secrets are missing, push is set to false so the workflow still compiles successfully as a test run!
-          push: ${{ secrets.DOCKERHUB_USERNAME }} != '' && ${{ secrets.DOCKERHUB_TOKEN != '' }}
+          push: ${{ secrets.DOCKERHUB_USERNAME != '' && secrets.DOCKERHUB_TOKEN != '' }}
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME || 'local-test' }}/myimage-ex4:latest
             ${{ secrets.DOCKERHUB_USERNAME || 'local-test' }}/myimage-ex4:v0.${{ github.run_number }}
