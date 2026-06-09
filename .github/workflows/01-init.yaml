@@ -21,7 +21,7 @@ on:
 jobs:
   show_repo:
     runs-on: ubuntu-latest
-    container: mlsokolova/quakewatch
+    container: python:3.13
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
