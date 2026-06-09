@@ -19,7 +19,7 @@ jobs:
   prod:
     if: ${{ github.event.inputs.environment == 'production' }}
     needs: staging
-    uses: ./.github/workflows/reusable-deploy.yaml
+    uses: ./.github/workflows/06-reusable-deploy.yaml
     with:
       environment: production
     secrets: inherit
