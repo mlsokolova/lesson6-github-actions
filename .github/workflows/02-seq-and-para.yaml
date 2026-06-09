@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Unit Tests
-        run: echo "Running unit tests..."
+        run: echo "Running unit tests..." && exit 1
 
   integration_tests:
     needs: build
